@@ -30,10 +30,8 @@ OBJS = $(patsubst %,$(ODIR)/%,$(notdir $(SRCS:.c=.o)))
 
 MANS = man/unclutter-xfixes.1
 
-.NOTPARALLEL:
-
 .PHONY: all
-all: clean $(TARGET) mans
+all: $(TARGET)
 
 .PHONY: $(TARGET)
 $(TARGET): $(OBJS)
